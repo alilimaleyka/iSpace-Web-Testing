@@ -1,0 +1,38 @@
+{
+  "Category Title": {
+    "locatorType": "XPATH",
+    "locatorValue": "//h1[contains(@class,'subcategory-page_title')]"
+  },
+
+  "Breadcrumb": {
+    "locatorType": "XPATH",
+    "locatorValue": "//nav[@class='breadcrumbs']"
+  },
+
+  "Product Count": {
+    "locatorType": "XPATH",
+    "locatorValue": "//span[contains(@class,'products-grid_total')]"
+  },
+
+  "Product Card Name": {
+    "locatorType": "XPATH",
+    "locatorValue": "//div[contains(@class,'products-grid_grid')]//span[@class='entity-card_name-text']"
+  },
+  "Product Card Price": {
+    "locatorType": "XPATH",
+    "locatorValue": "//div[contains(@class,'products-grid_grid')]//span[contains(@class,'carousel-product_price-value')]"
+  },
+
+  "First Product Image": {
+    "locatorType": "XPATH",
+    "locatorValue": "(//div[contains(@class,'products-grid_grid')]//a[contains(@class,'entity-card_image-wrapper')])[1]"
+  },
+  "Sort Dropdown": {
+    "locatorType": "XPATH",
+    "locatorValue": "//div[contains(@class,'products-grid_sort')]//div[contains(@class,'select_fake-input')]"
+  },
+  "Sort Option": {
+    "locatorType": "XPATH",
+    "locatorValue": "//div[contains(@class,'products-grid_sort-dropdown')]//div[@class='select_item']"
+  }
+}

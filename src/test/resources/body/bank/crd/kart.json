@@ -1,0 +1,4 @@
+{
+  "accountId": "${kartHesabi}",
+  "initialAmount": ${kartMeblegi}
+}

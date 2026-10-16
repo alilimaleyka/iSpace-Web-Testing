@@ -1,0 +1,16 @@
+{
+  "Search Input": {
+    "locatorType": "XPATH",
+    "locatorValue": "//div[contains(@class,'header_search')]//input[@type='search']"
+  },
+
+  "Search Result Title": {
+    "locatorType": "XPATH",
+    "locatorValue": "//h2[@data-test='search-title']"
+  },
+
+  "Search Result Product Name": {
+    "locatorType": "XPATH",
+    "locatorValue": "//div[@class='search-product']//span[@class='entity-card_name-text']"
+  }
+}

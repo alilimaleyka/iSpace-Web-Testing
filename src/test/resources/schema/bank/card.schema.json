@@ -1,0 +1,93 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Virtual card (GRAD-201 / 202)",
+  "type": "object",
+  "required": [
+    "id",
+    "accountId",
+    "label",
+    "maskedPan",
+    "expiry",
+    "currency",
+    "status",
+    "availableBalance",
+    "limits",
+    "blockReason",
+    "blockedAt",
+    "createdAt",
+    "spentToday"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^vcd_[A-Za-z0-9]{8}$"
+    },
+    "accountId": {
+      "type": "string"
+    },
+    "label": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "maskedPan": {
+      "type": "string"
+    },
+    "expiry": {
+      "type": "string",
+      "pattern": "^[0-9]{2}/[0-9]{2}$"
+    },
+    "currency": {
+      "type": "string",
+      "enum": [
+        "AZN",
+        "USD"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "ACTIVE",
+        "FROZEN",
+        "BLOCKED"
+      ]
+    },
+    "availableBalance": {
+      "type": "number"
+    },
+    "limits": {
+      "type": "object",
+      "required": [
+        "dailyOnline",
+        "perTransaction"
+      ],
+      "properties": {
+        "dailyOnline": {
+          "type": "number"
+        },
+        "perTransaction": {
+          "type": "number"
+        }
+      }
+    },
+    "blockReason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "blockedAt": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "createdAt": {
+      "type": "string"
+    },
+    "spentToday": {
+      "type": "number"
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Payment history (GRAD-303)",
+  "type": "object",
+  "required": [
+    "page",
+    "limit",
+    "total",
+    "totalPages",
+    "items"
+  ],
+  "properties": {
+    "page": {
+      "type": "integer"
+    },
+    "limit": {
+      "type": "integer"
+    },
+    "total": {
+      "type": "integer"
+    },
+    "totalPages": {
+      "type": "integer"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "receiptNo",
+          "billerId",
+          "subscriberNo",
+          "amount",
+          "fee",
+          "total",
+          "status",
+          "createdAt"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "receiptNo": {
+            "type": "string",
+            "pattern": "^RCP-[0-9]{8}-[0-9]{6}$"
+          },
+          "billerId": {
+            "type": "string"
+          },
+          "subscriberNo": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "number"
+          },
+          "fee": {
+            "type": "number"
+          },
+          "total": {
+            "type": "number"
+          },
+          "status": {
+            "type": "string"
+          },
+          "createdAt": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

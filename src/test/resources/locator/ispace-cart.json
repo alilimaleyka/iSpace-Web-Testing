@@ -1,0 +1,57 @@
+{
+  "Added To Cart Popup Title": {
+    "locatorType": "XPATH",
+    "locatorValue": "//p[@class='cart-widget-header_title']"
+  },
+
+  "View Cart Button": {
+    "locatorType": "XPATH",
+    "locatorValue": "//a[contains(@class,'cart-widget-footer_button') and @href='/cart']"
+  },
+
+  "Cart Counter": {
+    "locatorType": "XPATH",
+    "locatorValue": "//button[@data-test='header-cart-widget-trigger']//span[contains(@class,'counter-chip-label')]"
+  },
+
+  "Cart Item Name": {
+    "locatorType": "XPATH",
+    "locatorValue": "//div[@class='cart-item']//a[@class='cart-item-details_name']"
+  },
+
+  "Cart Item Quantity": {
+    "locatorType": "XPATH",
+    "locatorValue": "//div[@class='cart-item']//input[@name='quantity']"
+  },
+
+  "Cart Item Price": {
+    "locatorType": "XPATH",
+    "locatorValue": "//div[@class='cart-item']//span[@class='cart-product-price_value']"
+  },
+
+  "Cart Total": {
+    "locatorType": "XPATH",
+    "locatorValue": "//span[@class='submit-order-popup_submit-price-value']"
+  },
+
+  "Cookie Popup Button": {
+    "locatorType": "XPATH",
+    "locatorValue": "//button[contains(@class,'cookies-popup_button') and normalize-space(.)='Hamısını rədd et']"
+  },
+  "Close Cart Popup Button": {
+    "locatorType": "XPATH",
+    "locatorValue": "//button[@aria-label='close widget']"
+  },
+  "Cart Remove Button": {
+    "locatorType": "XPATH",
+    "locatorValue": "(//div[@class='cart-item']//button[@data-test='cart-item-remove-button'])[1]"
+  },
+  "Cart Item Increase": {
+    "locatorType": "XPATH",
+    "locatorValue": "//div[@class='cart-item']//button[@aria-label='increase']"
+  },
+  "Cart Item Decrease": {
+    "locatorType": "XPATH",
+    "locatorValue": "//div[@class='cart-item']//button[@aria-label='decrease']"
+  }
+}

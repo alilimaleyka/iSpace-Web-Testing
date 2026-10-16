@@ -1,0 +1,74 @@
+{
+  "Stock Filter Caption": {
+    "locatorType": "XPATH",
+    "locatorValue": "//button[@aria-label='Stokda var expand']"
+  },
+
+  "Memory Filter Caption": {
+    "locatorType": "XPATH",
+    "locatorValue": "//button[@aria-label='Yaddaş expand']"
+  },
+
+  "Series Filter Caption": {
+    "locatorType": "XPATH",
+    "locatorValue": "//button[@aria-label='Seriya expand']"
+  },
+
+  "Filter 256 GB": {
+    "locatorType": "XPATH",
+    "locatorValue": "//label[@data-test='ui-checkbox'][starts-with(normalize-space(.),'256 GB')]"
+  },
+
+  "Filter In Stock": {
+    "locatorType": "XPATH",
+    "locatorValue": "//label[@data-test='ui-checkbox'][starts-with(normalize-space(.),'Movcuddur')]"
+  },
+
+  "Filter iPhone 16": {
+    "locatorType": "XPATH",
+    "locatorValue": "//label[@data-test='ui-checkbox'][starts-with(normalize-space(.),'iPhone 16 (')]"
+  },
+
+  "Filter iPhone 15": {
+    "locatorType": "XPATH",
+    "locatorValue": "//label[@data-test='ui-checkbox'][starts-with(normalize-space(.),'iPhone 15 (')]"
+  },
+  "Product Card Cart Button": {
+    "locatorType": "XPATH",
+    "locatorValue": "//div[contains(@class,'products-grid_grid')]//button[@data-test='carousel-product-add-to-cart-button']"
+  },
+  "Price Min Input": {
+    "locatorType": "XPATH",
+    "locatorValue": "//input[@aria-label='-dən']"
+  },
+  "Price Max Input": {
+    "locatorType": "XPATH",
+    "locatorValue": "//input[@aria-label='qədər']"
+  },
+  "Filter Out Of Stock": {
+    "locatorType": "XPATH",
+    "locatorValue": "//label[@data-test='ui-checkbox'][starts-with(normalize-space(.),'Mövcud deyil')]"
+  },
+
+  "Product Card Notify Button": {
+    "locatorType": "XPATH",
+    "locatorValue": "//div[contains(@class,'products-grid_grid')]//a[@data-test='carousel-product-notify-me-button']"
+  },
+
+  "Last Product Card Price": {
+    "locatorType": "XPATH",
+    "locatorValue": "(//div[contains(@class,'products-grid_grid')]//span[contains(@class,'carousel-product_price-value')])[last()]"
+  },
+  "Pagination Page 2": {
+    "locatorType": "XPATH",
+    "locatorValue": "//div[contains(@class,'pagination_pages')]//a[normalize-space(.)='2']"
+  },
+  "Pagination Last Page": {
+    "locatorType": "XPATH",
+    "locatorValue": "(//div[contains(@class,'pagination_pages')]//a)[last()]"
+  },
+  "Max Price Label": {
+    "locatorType": "XPATH",
+    "locatorValue": "//p[@class='filter-item-price_description']"
+  }
+}

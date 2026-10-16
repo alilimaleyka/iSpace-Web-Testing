@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Billers catalogue (GRAD-301)",
+  "type": "object",
+  "required": [
+    "total",
+    "items"
+  ],
+  "properties": {
+    "total": {
+      "type": "integer"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "category",
+          "subscriberFormat",
+          "subscriberPattern",
+          "minAmount",
+          "maxAmount",
+          "fee"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "UTILITY",
+              "MOBILE",
+              "INTERNET"
+            ]
+          },
+          "subscriberFormat": {
+            "type": "string"
+          },
+          "subscriberPattern": {
+            "type": "string"
+          },
+          "minAmount": {
+            "type": "number"
+          },
+          "maxAmount": {
+            "type": "number"
+          },
+          "fee": {}
+        }
+      }
+    }
+  }
+}

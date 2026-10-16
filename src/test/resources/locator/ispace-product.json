@@ -1,0 +1,49 @@
+{
+  "Product Title": {
+    "locatorType": "XPATH",
+    "locatorValue": "//h1[@class='product-page_name']"
+  },
+
+  "Product SKU": {
+    "locatorType": "XPATH",
+    "locatorValue": "//div[@data-test='product-sku']"
+  },
+
+  "Product Price": {
+    "locatorType": "XPATH",
+    "locatorValue": "//span[@class='product-price_price-value']"
+  },
+
+  "Product Monthly Payment": {
+    "locatorType": "XPATH",
+    "locatorValue": "//span[@class='product-price_credit-text']"
+  },
+
+  "Add To Cart Button": {
+    "locatorType": "XPATH",
+    "locatorValue": "//button[@data-test='product-buy-button']"
+  },
+
+  "One Click Buy Button": {
+    "locatorType": "XPATH",
+    "locatorValue": "//button[@data-test='one-click-button']"
+  },
+  "Quantity Input": {
+    "locatorType": "XPATH",
+    "locatorValue": "//div[@data-test='product-quantity-block']//input[@name='quantity']"
+  },
+
+  "Quantity Increase Button": {
+    "locatorType": "XPATH",
+    "locatorValue": "//div[@data-test='product-quantity-block']//button[@aria-label='increase']"
+  },
+
+  "Quantity Decrease Button": {
+    "locatorType": "XPATH",
+    "locatorValue": "//div[@data-test='product-quantity-block']//button[@aria-label='decrease']"
+  },
+  "Memory Option 512 GB": {
+    "locatorType": "XPATH",
+    "locatorValue": "//*[@data-test='product-feature-item-512-GB']"
+  }
+}

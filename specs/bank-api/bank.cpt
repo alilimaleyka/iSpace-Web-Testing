@@ -1,0 +1,164 @@
+Bank API — təkrar istifadə olunan addımlar (concept faylı).
+
+Login concept-ləri hər dəfə yeni sessiya açır: bank API-də hər login yeni, boş sandbox yaradır.
+Ona görə hər ssenari öz datası ilə başlayır və digər ssenarilərdən asılı deyil.
+
+# user1 olaraq yeni sandbox-da login ol
+
+* "/auth/login" ünvanına "bank/login-user1.json" ile yeni sessiya açaraq login ol ve "token" tokenini yadda saxla
+
+# user2 olaraq yeni sandbox-da login ol
+
+* "/auth/login" ünvanına "bank/login-user2.json" ile yeni sessiya açaraq login ol ve "token" tokenini yadda saxla
+
+# admin olaraq yeni sandbox-da login ol
+
+* "/auth/login" ünvanına "bank/login-admin.json" ile yeni sessiya açaraq login ol ve "token" tokenini yadda saxla
+
+# <bodyFile> faylı ile alıcı yarat
+
+* Yeni API sorğusu hazırla
+* Authorization header-ine tokeni elave et
+* Body olaraq <bodyFile> faylını elave et
+* "POST" sorğusu gönder "/beneficiaries"
+* Status kodunun "201" olmalıdır
+
+# <bodyFile> faylı ile alıcı yarat ve id-ni <variable> olaraq yadda saxla
+
+* <bodyFile> faylı ile alıcı yarat
+* Json cavabında "id" deyerini <variable> olaraq yadda saxla
+
+# Dataset A alıcılarını yarat
+
+8 alıcı yaradılma sırası ilə: Cavid Məmmədov, Zaur Həsənov, Əli Rzayev, Çingiz Abbasov, Xəyal Quliyev, Elvin Kərimov, Qasım Əliyev, Kamal Nəsirov
+
+* "bank/ben/dataset-a/01.json" faylı ile alıcı yarat
+* "bank/ben/dataset-a/02.json" faylı ile alıcı yarat
+* "bank/ben/dataset-a/03.json" faylı ile alıcı yarat
+* "bank/ben/dataset-a/04.json" faylı ile alıcı yarat
+* "bank/ben/dataset-a/05.json" faylı ile alıcı yarat
+* "bank/ben/dataset-a/06.json" faylı ile alıcı yarat
+* "bank/ben/dataset-a/07.json" faylı ile alıcı yarat
+* "bank/ben/dataset-a/08.json" faylı ile alıcı yarat
+
+# Dataset B alıcılarını yarat
+
+5 alıcı yaradılma sırası ilə: Nigar Əliyeva, İlkin Səfərov, Ramin Quliyev, Nigar Həsənova, Işıl Kərimova
+
+* "bank/ben/dataset-b/01.json" faylı ile alıcı yarat
+* "bank/ben/dataset-b/02.json" faylı ile alıcı yarat
+* "bank/ben/dataset-b/03.json" faylı ile alıcı yarat
+* "bank/ben/dataset-b/04.json" faylı ile alıcı yarat
+* "bank/ben/dataset-b/05.json" faylı ile alıcı yarat
+
+# Alıcılar siyahısını 10 alıcı ile doldur
+
+Hər sorğu 201 qaytarmalıdır (10 = limit sərhədi). Birinci alıcının id-si ${ilkAliciId}-də saxlanılır.
+
+* "bank/ben/limit/01.json" faylı ile alıcı yarat ve id-ni "ilkAliciId" olaraq yadda saxla
+* "bank/ben/limit/02.json" faylı ile alıcı yarat
+* "bank/ben/limit/03.json" faylı ile alıcı yarat
+* "bank/ben/limit/04.json" faylı ile alıcı yarat
+* "bank/ben/limit/05.json" faylı ile alıcı yarat
+* "bank/ben/limit/06.json" faylı ile alıcı yarat
+* "bank/ben/limit/07.json" faylı ile alıcı yarat
+* "bank/ben/limit/08.json" faylı ile alıcı yarat
+* "bank/ben/limit/09.json" faylı ile alıcı yarat
+* "bank/ben/limit/10.json" faylı ile alıcı yarat
+
+# <hesab> hesabından <mebleg> məbləğində kart burax
+
+Kartın id-si ${cardId}-də saxlanılır.
+
+* "kartHesabi" deyişenine <hesab> deyerini ver
+* "kartMeblegi" deyişenine <mebleg> deyerini ver
+* Yeni API sorğusu hazırla
+* Authorization header-ine tokeni elave et
+* Body olaraq "bank/crd/kart.json" faylını elave et
+* "POST" sorğusu gönder "/cards"
+* Status kodunun "201" olmalıdır
+* Json cavabında "id" deyerini "cardId" olaraq yadda saxla
+
+# <hesab> hesabından <mebleg> məbləğində kart burax ve id-ni <variable> olaraq yadda saxla
+
+* <hesab> hesabından <mebleg> məbləğində kart burax
+* <variable> deyişenine "${cardId}" deyerini ver
+
+# Kartı <sebeb> səbəbi ilə blokla
+
+${cardId} kartı üçün POST /cards/{id}/block.
+
+* "blokSebebi" deyişenine <sebeb> deyerini ver
+* Yeni API sorğusu hazırla
+* Authorization header-ine tokeni elave et
+* Body olaraq "bank/crd/blok.json" faylını elave et
+* "POST" sorğusu gönder "/cards/${cardId}/block"
+* Status kodunun "200" olmalıdır
+
+# Kartı blokdan çıxar
+
+${cardId} kartı üçün POST /cards/{id}/unblock (body göndərilmir).
+
+* Yeni API sorğusu hazırla
+* Authorization header-ine tokeni elave et
+* "POST" sorğusu gönder "/cards/${cardId}/unblock"
+* Status kodunun "200" olmalıdır
+
+# <teminatci> təchizatçısına <abuneci> nömrəsi üçün <mebleg> AZN ödəniş et
+
+${cardId} kartı ilə, hər dəfə yeni (təsadüfi) Idempotency-Key ilə.
+
+* "odenisTeminatci" deyişenine <teminatci> deyerini ver
+* "odenisAbuneci" deyişenine <abuneci> deyerini ver
+* "odenisMeblegi" deyişenine <mebleg> deyerini ver
+* Yeni API sorğusu hazırla
+* Authorization header-ine tokeni elave et
+* Header elave et "Idempotency-Key" = "${random.uuid}"
+* Body olaraq "bank/pay/odenis.json" faylını elave et
+* "POST" sorğusu gönder "/bill-payments"
+* Status kodunun "201" olmalıdır
+
+# <teminatci> təchizatçısına <abuneci> nömrəsi üçün <mebleg> AZN ödənişi idemKey açarı ilə göndər
+
+Idempotency-Key = ${idemKey}. Status yoxlanılmır — ssenari özü yoxlayır.
+
+* "odenisTeminatci" deyişenine <teminatci> deyerini ver
+* "odenisAbuneci" deyişenine <abuneci> deyerini ver
+* "odenisMeblegi" deyişenine <mebleg> deyerini ver
+* Yeni API sorğusu hazırla
+* Authorization header-ine tokeni elave et
+* Header elave et "Idempotency-Key" = "${idemKey}"
+* Body olaraq "bank/pay/odenis.json" faylını elave et
+* "POST" sorğusu gönder "/bill-payments"
+
+# Dataset P ödəniş tarixçəsini yarat
+
+Yeni sandbox-da 2 kart və 18 ödəniş: kart A (200 AZN) — 10 × Azərsu 1 AZN, sonra 6 × CityNet 5 AZN; kart B (50 AZN) — 2 × Aztelekom 2 AZN.
+Qəbzlər 000001 … 000018. Dəyişənlər: ${cardA}, ${cardB}, ${today}, ${tomorrow}, ${yesterday}, ${bugun} (yyyyMMdd).
+
+* "acc_002" hesabından "200" məbləğində kart burax ve id-ni "cardA" olaraq yadda saxla
+* "acc_002" hesabından "50" məbləğində kart burax ve id-ni "cardB" olaraq yadda saxla
+* "cardId" deyişenine "${cardA}" deyerini ver
+* "azersu" təchizatçısına "12345678" nömrəsi üçün "1" AZN ödəniş et
+* "azersu" təchizatçısına "12345678" nömrəsi üçün "1" AZN ödəniş et
+* "azersu" təchizatçısına "12345678" nömrəsi üçün "1" AZN ödəniş et
+* "azersu" təchizatçısına "12345678" nömrəsi üçün "1" AZN ödəniş et
+* "azersu" təchizatçısına "12345678" nömrəsi üçün "1" AZN ödəniş et
+* "azersu" təchizatçısına "12345678" nömrəsi üçün "1" AZN ödəniş et
+* "azersu" təchizatçısına "12345678" nömrəsi üçün "1" AZN ödəniş et
+* "azersu" təchizatçısına "12345678" nömrəsi üçün "1" AZN ödəniş et
+* "azersu" təchizatçısına "12345678" nömrəsi üçün "1" AZN ödəniş et
+* "azersu" təchizatçısına "12345678" nömrəsi üçün "1" AZN ödəniş et
+* "citynet" təchizatçısına "CN123456" nömrəsi üçün "5" AZN ödəniş et
+* "citynet" təchizatçısına "CN123456" nömrəsi üçün "5" AZN ödəniş et
+* "citynet" təchizatçısına "CN123456" nömrəsi üçün "5" AZN ödəniş et
+* "citynet" təchizatçısına "CN123456" nömrəsi üçün "5" AZN ödəniş et
+* "citynet" təchizatçısına "CN123456" nömrəsi üçün "5" AZN ödəniş et
+* "citynet" təchizatçısına "CN123456" nömrəsi üçün "5" AZN ödəniş et
+* "cardId" deyişenine "${cardB}" deyerini ver
+* "aztelekom" təchizatçısına "1234567" nömrəsi üçün "2" AZN ödəniş et
+* "aztelekom" təchizatçısına "1234567" nömrəsi üçün "2" AZN ödəniş et
+* Bu gündən "0" gün sonranın tarixini "yyyy-MM-dd" formatında "today" olaraq yadda saxla
+* Bu gündən "1" gün sonranın tarixini "yyyy-MM-dd" formatında "tomorrow" olaraq yadda saxla
+* Bu gündən "-1" gün sonranın tarixini "yyyy-MM-dd" formatında "yesterday" olaraq yadda saxla
+* Bu gündən "0" gün sonranın tarixini "yyyyMMdd" formatında "bugun" olaraq yadda saxla

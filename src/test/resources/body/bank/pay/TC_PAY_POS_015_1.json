@@ -1,0 +1,6 @@
+{
+  "cardId": "${cardId}",
+  "billerId": "aztelekom",
+  "subscriberNo": "1234567",
+  "amount": 2
+}

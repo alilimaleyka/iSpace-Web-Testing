@@ -1,0 +1,45 @@
+# Cookie bildirişini rədd et
+
+* Bütün cookie-leri sil
+* Cookie elave et "gb-anon-id" = "76c7905b-f815-4db7-bb6d-2d6d44541e0a"
+* Cookie elave et "gb-exp" = "pdp_v2:0"
+* Sehifeni yenile
+* "Cookie Popup Button" görsensin deye maksimum "15" saniye gözle
+* "2" saniye gözle
+* "Cookie Popup Button" elementine klik et
+
+# <url> siyahısından stokda olan ilk məhsulu aç
+
+* <url> adresine keçid et
+* "First Product Image" görsensin deye maksimum "15" saniye gözle
+* "First Product Image" elementine klik et
+* URL "/product/" içermelidir
+* "Product Price" görünənə qədər A/B testini köhnə dizayna qaytar
+
+# Açıq məhsulu səbətə əlavə et
+
+* "Add To Cart Button" görsensin deye maksimum "15" saniye gözle
+* "Add To Cart Button" elementine klik et
+* "Added To Cart Popup Title" görsensin deye maksimum "10" saniye gözle
+
+# <url> siyahısından stokda olan ilk məhsulu səbətə əlavə et və qiymətini <variable> olaraq yadda saxla
+
+* <url> siyahısından stokda olan ilk məhsulu aç
+* "Product Price" elementinin metnini <variable> olaraq yadda saxla
+* Açıq məhsulu səbətə əlavə et
+
+# Səbətə iki fərqli məhsul əlavə et və səbəti aç
+
+* "https://ispace.az/category/iphone?filter_stock=1" siyahısından stokda olan ilk məhsulu səbətə əlavə et və qiymətini "qiymetA" olaraq yadda saxla
+* "https://ispace.az/category/airpods?filter_stock=1" siyahısından stokda olan ilk məhsulu səbətə əlavə et və qiymətini "qiymetB" olaraq yadda saxla
+* "View Cart Button" elementine klik et
+* "Cart Item Name" görsensin deye maksimum "15" saniye gözle
+
+# <url> siyahısından <sekil> məhsulunu səbətə əlavə et
+
+* <url> adresine keçid et
+* <sekil> görsensin deye maksimum "15" saniye gözle
+* <sekil> elementine klik et
+* URL "/product/" içermelidir
+* "Product Price" görünənə qədər A/B testini köhnə dizayna qaytar
+* Açıq məhsulu səbətə əlavə et

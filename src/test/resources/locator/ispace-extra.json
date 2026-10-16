@@ -1,0 +1,61 @@
+{
+  "Filter 512 GB": {
+    "locatorType": "XPATH",
+    "locatorValue": "//label[@data-test='ui-checkbox'][starts-with(normalize-space(.),'512 GB')]"
+  },
+
+  "Stock Filter Options": {
+    "locatorType": "XPATH",
+    "locatorValue": "//label[@data-test='ui-checkbox'][starts-with(normalize-space(.),'Movcuddur') or starts-with(normalize-space(.),'Mövcud deyil')]"
+  },
+
+  "SIM Filter Caption": {
+    "locatorType": "XPATH",
+    "locatorValue": "//button[@aria-label='SIM kart növü expand']"
+  },
+
+  "SIM Filter Options": {
+    "locatorType": "XPATH",
+    "locatorValue": "//label[@data-test='ui-checkbox'][starts-with(normalize-space(.),'Nano-SIM') or starts-with(normalize-space(.),'eSIM (')]"
+  },
+
+  "Second Product Image": {
+    "locatorType": "XPATH",
+    "locatorValue": "(//div[contains(@class,'products-grid_grid')]//a[contains(@class,'entity-card_image-wrapper')])[2]"
+  },
+
+  "Third Product Image": {
+    "locatorType": "XPATH",
+    "locatorValue": "(//div[contains(@class,'products-grid_grid')]//a[contains(@class,'entity-card_image-wrapper')])[3]"
+  },
+
+  "Empty Cart Title": {
+    "locatorType": "XPATH",
+    "locatorValue": "//span[contains(@class,'empty-cart_title')]"
+  },
+
+  "Credits Modal Product Name": {
+    "locatorType": "XPATH",
+    "locatorValue": "//div[contains(@class,'credits-modal')]//a[contains(@class,'cart-item-details_name')]"
+  },
+
+  "Credits Modal Price": {
+    "locatorType": "XPATH",
+    "locatorValue": "//div[contains(@class,'credits-modal')]//span[@class='cart-product-price_value']"
+  },
+
+  "Credits Modal Buy Button": {
+    "locatorType": "XPATH",
+    "locatorValue": "//button[contains(@class,'credits-modal_buy-button')]"
+  },
+
+  "Credits Modal Credit Button": {
+    "locatorType": "XPATH",
+    "locatorValue": "//button[contains(@class,'credits-modal_credit-button')]"
+  },
+
+  "Credit Term 12": {
+    "locatorType": "XPATH",
+    "locatorValue": "//button[contains(@class,'credit-term-chip')][.//span[@class='credit-term-chip_number' and normalize-space(.)='12']]"
+  }
+}

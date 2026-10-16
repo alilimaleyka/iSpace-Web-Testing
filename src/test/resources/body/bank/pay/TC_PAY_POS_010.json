@@ -1,0 +1,6 @@
+{
+  "cardId": "${cardId}",
+  "billerId": "citynet",
+  "subscriberNo": "CN123456",
+  "amount": 50
+}

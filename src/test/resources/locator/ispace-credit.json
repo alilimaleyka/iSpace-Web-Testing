@@ -1,0 +1,31 @@
+{
+  "Installment Programs Button": {
+    "locatorType": "XPATH",
+    "locatorValue": "//button[contains(@class,'product-price_credit-button')]"
+  },
+
+  "Credits Modal Title": {
+    "locatorType": "XPATH",
+    "locatorValue": "//p[@class='credits-modal_header']"
+  },
+
+  "Credit Term 18": {
+    "locatorType": "XPATH",
+    "locatorValue": "//button[contains(@class,'credit-term-chip')][.//span[@class='credit-term-chip_number' and normalize-space(.)='18']]"
+  },
+
+  "Credit Monthly": {
+    "locatorType": "XPATH",
+    "locatorValue": "//span[@class='credit-bank-row_monthly']"
+  },
+
+  "Credit Payment Count": {
+    "locatorType": "XPATH",
+    "locatorValue": "//span[@class='credit-bank-row_multiplier']"
+  },
+
+  "Credit Total": {
+    "locatorType": "XPATH",
+    "locatorValue": "//span[@class='credit-bank-row_total-price']"
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "In Stock Memory Option": {
+    "locatorType": "XPATH",
+    "locatorValue": "(//a[contains(@class,'product-feature-items-list_item')][not(contains(@class,'out-of-stock'))][contains(@data-test,'-GB') or contains(@data-test,'-TB')])[1]"
+  },
+
+  "Active Memory Option": {
+    "locatorType": "XPATH",
+    "locatorValue": "//div[contains(@class,'product-feature-items-list_item') and contains(@class,'active')][contains(@data-test,'-GB') or contains(@data-test,'-TB')]"
+  },
+
+  "Other Color Option": {
+    "locatorType": "XPATH",
+    "locatorValue": "(//a[contains(@class,'product-color-list_color-wrapper')])[1]"
+  },
+
+  "Color Title": {
+    "locatorType": "XPATH",
+    "locatorValue": "//p[contains(@class,'feature-list_item-title')][starts-with(normalize-space(.),'Rəng')]"
+  },
+
+  "Product Cards": {
+    "locatorType": "XPATH",
+    "locatorValue": "//div[contains(@class,'products-grid_grid')]//div[@data-test='carousel-product']"
+  },
+
+  "Product Card Images": {
+    "locatorType": "XPATH",
+    "locatorValue": "//div[contains(@class,'products-grid_grid')]//a[contains(@class,'entity-card_image-wrapper')]"
+  },
+
+  "Product Card Action Button": {
+    "locatorType": "XPATH",
+    "locatorValue": "//div[contains(@class,'products-grid_grid')]//*[starts-with(@data-test,'carousel-product-') and substring(@data-test, string-length(@data-test) - 6) = '-button']"
+  },
+
+  "First Product Card Name": {
+    "locatorType": "XPATH",
+    "locatorValue": "(//div[contains(@class,'products-grid_grid')]//span[@class='entity-card_name-text'])[1]"
+  },
+
+  "First Product Card Price": {
+    "locatorType": "XPATH",
+    "locatorValue": "(//div[contains(@class,'products-grid_grid')]//span[contains(@class,'carousel-product_price-value')])[1]"
+  },
+
+  "First Product Card Monthly": {
+    "locatorType": "XPATH",
+    "locatorValue": "(//div[contains(@class,'products-grid_grid')]//p[contains(@class,'carousel-product_credit-text')])[1]"
+  },
+
+  "First Product Card Cart Button": {
+    "locatorType": "XPATH",
+    "locatorValue": "(//div[contains(@class,'products-grid_grid')]//button[@data-test='carousel-product-add-to-cart-button'])[1]"
+  },
+
+  "PDP Notify Button": {
+    "locatorType": "XPATH",
+    "locatorValue": "//button[contains(@class,'product-cart-popup_notify-button')]"
+  },
+
+  "Delivery Block": {
+    "locatorType": "XPATH",
+    "locatorValue": "//div[@data-test='product-delivery-block']"
+  },
+
+  "PDP Total Price": {
+    "locatorType": "XPATH",
+    "locatorValue": "(//span[@class='product-price_price-value'])[2]"
+  },
+
+  "Protection Option": {
+    "locatorType": "XPATH",
+    "locatorValue": "(//div[contains(@class,'product-page_services')]//div[contains(concat(' ',normalize-space(@class),' '),' product-services_item ')])[1]"
+  },
+
+  "Protection Price": {
+    "locatorType": "XPATH",
+    "locatorValue": "(//div[contains(@class,'product-page_services')]//div[@class='product-services_item-price'])[1]"
+  },
+
+  "No Protection Option": {
+    "locatorType": "XPATH",
+    "locatorValue": "(//div[contains(@class,'product-page_services')]//div[contains(@class,'product-services_item-no-plan')])[1]"
+  },
+
+  "Modal Protection Option": {
+    "locatorType": "XPATH",
+    "locatorValue": "(//div[contains(@class,'credits-modal')]//div[contains(concat(' ',normalize-space(@class),' '),' product-services_item ')])[1]"
+  },
+
+  "Modal Protection Price": {
+    "locatorType": "XPATH",
+    "locatorValue": "(//div[contains(@class,'credits-modal')]//div[@class='product-services_item-price'])[1]"
+  },
+
+  "Modal No Protection Option": {
+    "locatorType": "XPATH",
+    "locatorValue": "(//div[contains(@class,'credits-modal')]//div[contains(@class,'product-services_item-no-plan')])[1]"
+  },
+
+  "Modal Pay Total": {
+    "locatorType": "XPATH",
+    "locatorValue": "//div[@class='credits-modal_price-wrapper']/div[2]"
+  },
+
+  "Modal Quantity Input": {
+    "locatorType": "XPATH",
+    "locatorValue": "//div[contains(@class,'credits-modal')]//input[@name='quantity']"
+  },
+
+  "Modal Quantity Increase": {
+    "locatorType": "XPATH",
+    "locatorValue": "//div[contains(@class,'credits-modal')]//button[@aria-label='increase']"
+  },
+
+  "Modal Quantity Decrease": {
+    "locatorType": "XPATH",
+    "locatorValue": "//div[contains(@class,'credits-modal')]//button[@aria-label='decrease']"
+  },
+
+  "Credit Term Chips": {
+    "locatorType": "XPATH",
+    "locatorValue": "//button[contains(@class,'credit-term-chip')]"
+  },
+
+  "Last Credit Term": {
+    "locatorType": "XPATH",
+    "locatorValue": "(//button[contains(@class,'credit-term-chip')])[last()]"
+  },
+
+  "Cart Protection Option": {
+    "locatorType": "XPATH",
+    "locatorValue": "(//div[contains(@class,'cart-item_services-cart-page')]//div[contains(concat(' ',normalize-space(@class),' '),' product-services_item ')])[1]"
+  },
+
+  "Cart Protection Price": {
+    "locatorType": "XPATH",
+    "locatorValue": "(//div[contains(@class,'cart-item_services-cart-page')]//div[@class='product-services_item-price'])[1]"
+  },
+
+  "Cart No Protection Option": {
+    "locatorType": "XPATH",
+    "locatorValue": "(//div[contains(@class,'cart-item_services-cart-page')]//div[contains(@class,'product-services_item-no-plan')])[1]"
+  },
+
+  "Cart Full Payment": {
+    "locatorType": "XPATH",
+    "locatorValue": "//span[@class='cart-payment_full-price']"
+  },
+
+  "Cart Financing Price": {
+    "locatorType": "XPATH",
+    "locatorValue": "//span[@class='cart-payment_financing-price']"
+  },
+
+  "Filter iPhone 18 Pro": {
+    "locatorType": "XPATH",
+    "locatorValue": "//label[@data-test='ui-checkbox'][starts-with(normalize-space(.),'iPhone 18 Pro (')]"
+  },
+
+  "Filter 1 TB": {
+    "locatorType": "XPATH",
+    "locatorValue": "//label[@data-test='ui-checkbox'][starts-with(normalize-space(.),'1 TB (')]"
+  },
+
+  "Color Filter Caption": {
+    "locatorType": "XPATH",
+    "locatorValue": "//button[@aria-label='Rəng expand']"
+  },
+
+  "Filter Silver": {
+    "locatorType": "XPATH",
+    "locatorValue": "//label[@data-test='ui-checkbox'][starts-with(normalize-space(.),'Gümüş (')]"
+  },
+
+  "Filter Black": {
+    "locatorType": "XPATH",
+    "locatorValue": "//label[@data-test='ui-checkbox'][starts-with(normalize-space(.),'Qara (')]"
+  }
+}
